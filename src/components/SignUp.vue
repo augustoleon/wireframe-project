@@ -41,11 +41,12 @@
     
     <button 
       :disabled="!isPhoneNumberValid"
-      class="w-full py-3 px-4 rounded-lg transition text-sm md:text-base md:py-4 font-medium"
+      class="w-full mt-4 py-3 px-4 rounded-lg transition text-sm md:text-base md:py-4 font-medium"
       :class="{
         'bg-gray-300 text-gray-600 cursor-not-allowed': !isPhoneNumberValid,
         'bg-blue-600 text-white hover:bg-blue-700': isPhoneNumberValid
       }"
+      @click="signUp"
     >
       Sign Up
     </button>
@@ -136,7 +137,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
+import { useRouter } from 'vue-router';
 const countries = ref([
   { code: '+54', flag: '🇦🇷' },
   { code: '+1', flag: '🇺🇸' },
@@ -150,6 +151,7 @@ const selectedCountry = ref('+54');
 const selectedFlag = ref('🇦🇷');
 const phoneNumber = ref('');
 const isPhoneNumberValid = ref(false);
+const router = useRouter();
 
 
 const updateFlag = () => {
@@ -160,4 +162,6 @@ const updateFlag = () => {
 const checkInput = () => {
   isPhoneNumberValid.value = phoneNumber.value !== null && phoneNumber.value !== '';
 };
+
+const signUp = () => router.push('/verify-phone-number');
 </script>

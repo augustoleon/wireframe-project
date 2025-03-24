@@ -1,4 +1,5 @@
 <template>
+    <router-view />
   <SignUp />
 </template>
 
