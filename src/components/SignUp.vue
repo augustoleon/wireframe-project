@@ -41,7 +41,7 @@
     
     <button 
       :disabled="!isPhoneNumberValid"
-      class="w-full mt-4 py-3 px-4 rounded-lg transition text-sm md:text-base md:py-4 font-medium"
+      class="w-full mt-4 py-3 px-4 rounded-lg transition text-md md:text-base md:py-4 font-medium"
       :class="{
         'bg-gray-300 text-gray-600 cursor-not-allowed': !isPhoneNumberValid,
         'bg-blue-600 text-white hover:bg-blue-700': isPhoneNumberValid

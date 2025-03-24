@@ -78,7 +78,7 @@ const handleInput = (index: number, event: Event) => {
 
 const verify = () => {
   if (isCodeComplete.value) {
-    router.push('/') // Redirige al home después de verificar
+    router.push('/create-password') // Redirige al home después de verificar
   }
 }
 

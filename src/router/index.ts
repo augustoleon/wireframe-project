@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SignUp from '../components/SignUp.vue'
+import AddYourPassword from '../views/AddYourPassword.vue'
 import VerifyPhone from '../views/VerifyPhone.vue'
 
 const router = createRouter({
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/verify-phone-number',
       name: 'VerifyPhone',
       component: VerifyPhone
+    },
+    {
+      path: '/create-password',
+      name: 'AddPassword',
+      component: AddYourPassword
     }
   ]
 })
