@@ -32,7 +32,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 1. **Clona el repositorio**:
    ```bash
    git clone git@github.com:augustoleon/wireframe-project.git
-   cd poll-form-builder
+   cd wireframe-project
 
 2. **Instala las dependencias**:
    ```bash
